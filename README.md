@@ -1,11 +1,18 @@
 # Recommendation Service
 
-A production-ready backend recommendation service built with Go, PostgreSQL, Redis, and Docker.
+Production-ready backend recommendation service built with Go, PostgreSQL, Redis, and Docker. Implements a layered architecture with Redis caching, concurrent batch processing, and a heuristic-based scoring algorithm simulating ML inference.
 
 ## Quick Start
 
 ```bash
+# 1. Start all services
 docker-compose up --build
+
+# 2. Seed the database (separate terminal)
+docker-compose --profile tools run --rm seeder
+
+# 3. Run performance tests (optional)
+docker-compose --profile tools run --rm k6
 ```
 
 The API will be available at `http://localhost:8080`.
@@ -17,17 +24,15 @@ The API will be available at `http://localhost:8080`.
 ### Prerequisites
 
 - Docker & Docker Compose
-- Go 1.22+ (for local development only)
-- k6 (for performance testing)
 
 ### Run with Docker (recommended)
 
 ```bash
-# 1. Start all services (app + postgres + redis)
+# Start all services (app + postgres + redis)
 docker-compose up --build
 
-# 2. Seed the database (in a separate terminal)
-docker-compose exec app go run scripts/seed.go
+# Seed database
+docker-compose --profile tools run --rm seeder
 ```
 
 ### Run locally
@@ -36,7 +41,7 @@ docker-compose exec app go run scripts/seed.go
 # Start dependencies
 docker-compose up postgres redis
 
-# Run migrations (auto-applied via docker-entrypoint-initdb.d on postgres)
+# Run migrations
 psql $DATABASE_URL -f migrations/001_create_tables.sql
 
 # Seed
@@ -57,22 +62,27 @@ go run ./cmd/server
 GET /users/{user_id}/recommendations?limit=10
 ```
 
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| user_id | integer | yes | Unique identifier of the user |
+| limit | integer | no | Number of recommendations (default: 10, max: 50) |
+
 **Response:**
 ```json
 {
   "user_id": 1,
   "recommendations": [
     {
-      "content_id": 42,
-      "title": "Action Title 5",
+      "content_id": 8,
+      "title": "Action Title 8",
       "genre": "action",
       "popularity_score": 0.87,
-      "score": 0.74
+      "score": 0.53
     }
   ],
   "metadata": {
     "cache_hit": false,
-    "generated_at": "2026-02-15T10:30:00Z",
+    "generated_at": "2026-04-12T14:53:15Z",
     "total_count": 10
   }
 }
@@ -83,6 +93,20 @@ GET /users/{user_id}/recommendations?limit=10
 ```
 GET /recommendations/batch?page=1&limit=20
 ```
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| page | integer | no | Page number (default: 1, min: 1) |
+| limit | integer | no | Users per page (default: 20, max: 100) |
+
+### Error Responses
+
+| Status | Error Code | Description |
+|--------|-----------|-------------|
+| 400 | invalid_parameter | Invalid query parameter |
+| 404 | user_not_found | User does not exist |
+| 500 | internal_error | Unexpected server error |
+| 503 | model_unavailable | Model inference failed |
 
 ---
 
@@ -126,7 +150,7 @@ GET /recommendations/batch?page=1&limit=20
 ## Design Decisions
 
 ### Caching Strategy
-TTL of 10 minutes balances freshness against DB load. Keys are scoped by `user_id` and `limit` so a user requesting 5 vs 10 recommendations gets independent cache entries. Cache is invalidated on watch history updates.
+TTL of 10 minutes balances freshness against DB load. Keys are scoped by `user_id` and `limit` so a user requesting 5 vs 10 recommendations gets independent cache entries. Cache is invalidated on watch history updates via Redis SCAN + DEL pattern.
 
 ### Concurrency Control
 The batch endpoint uses a semaphore-based worker pool capped at 10 concurrent goroutines. This prevents connection pool exhaustion under high batch load while keeping latency low.
@@ -135,39 +159,57 @@ The batch endpoint uses a semaphore-based worker pool capped at 10 concurrent go
 Service errors are typed (sentinel errors) so handlers can map them precisely to HTTP status codes without string matching.
 
 ### Scoring Algorithm Weights
-| Component   | Weight | Rationale |
-|-------------|--------|-----------|
-| Popularity  | 0.40   | Dominant signal — popular content converts well |
-| Genre match | 0.35   | Personalisation signal from watch history |
-| Recency     | 0.15   | Slight freshness bias to surface new content |
-| Noise       | 0.10   | Exploration — prevents filter bubbles |
+| Component | Weight | Rationale |
+|-----------|--------|-----------|
+| Popularity | 0.40 | Dominant signal — popular content converts well |
+| Genre match | 0.35 | Personalisation signal from watch history |
+| Recency | 0.15 | Slight freshness bias to surface new content |
+| Noise | 0.10 | Exploration — prevents filter bubbles |
+
+### Database Indexing
+| Index | Purpose |
+|-------|---------|
+| idx_watch_history_user | Speeds up fetching watch history for a specific user |
+| idx_watch_history_composite | Optimizes queries that need recent watch history ordered by time |
+| idx_content_genre | Enables fast filtering by genre for recommendation candidates |
+| idx_content_popularity | DESC ordering helps quickly fetch top popular content |
 
 ---
 
-## Performance Testing
+## Performance Results
 
-```bash
-# Install k6
-brew install k6   # macOS
-# or: https://k6.io/docs/getting-started/installation/
+Test environment: Docker on Windows 10, 3 scenarios running sequentially.
 
-# Run all scenarios
-k6 run tests/k6/load_test.js
+### k6 Test Results
+
+```
+scenarios: 3 scenarios, 209 max VUs, 3m30s total duration
+  - single_user_load:    100 RPS for 1 minute
+  - batch_stress:        up to 30 VUs for 1m20s
+  - cache_effectiveness: 5 VUs for 30s
 ```
 
-### Test Scenarios
+### Metrics Summary
 
-1. **Single User Load Test** — 100 RPS for 1 minute against `/users/{id}/recommendations`
-2. **Batch Stress Test** — Ramping VUs against `/recommendations/batch` with varying page sizes
-3. **Cache Effectiveness Test** — Repeated requests to the same 3 users to measure cache hit ratio
+| Metric | Result | Threshold | Status |
+|--------|--------|-----------|--------|
+| avg latency | 0.65ms | - | ✅ |
+| p(90) latency | 1.08ms | - | ✅ |
+| p(95) latency | 1.35ms | < 500ms | ✅ |
+| p(99) latency | 1.87ms | < 1000ms | ✅ |
+| max latency | 7.08ms | - | ✅ |
+| error rate | 0.00% | < 5% | ✅ |
+| throughput | 41.65 req/s | - | ✅ |
+| total requests | 7,501 | - | - |
+| cache hit rate | 100% | - | ✅ |
 
-### Thresholds
+### Cache Hit Rate Analysis
+Cache hit rate reached 100% during the `cache_effectiveness` scenario where the same 3 users were requested repeatedly. This confirms Redis caching is functioning correctly — subsequent requests within the 10-minute TTL window are served entirely from cache without touching PostgreSQL.
 
-| Metric | Threshold |
-|--------|-----------|
-| p95 latency | < 500ms |
-| p99 latency | < 1000ms |
-| Error rate | < 5% (includes simulated 1.5% model failures) |
+### Bottlenecks and Limiting Factors
+The simulated 30–50ms model latency is the dominant factor on cache-miss requests. On cache-hit requests, latency drops to sub-millisecond range (avg 0.65ms), demonstrating that Redis effectively eliminates the DB + model overhead for repeated requests.
+
+The `has results` check failed for 2.52% of batch requests, which is expected behaviour — the 1.5% simulated model failure rate causes some per-user results to return as failed status within the batch response.
 
 ---
 
@@ -179,7 +221,9 @@ k6 run tests/k6/load_test.js
 - Watch history cache invalidation uses SCAN which can be slow on large Redis keyspaces
 
 **Proposed enhancements:**
+- Add interface abstraction on Repository and Cache layers for easier testing and swapping implementations
 - Add circuit breaker around model client calls
-- Pre-warm cache for top-1000 active users during off-peak hours
+- Pre-warm cache for top active users during off-peak hours
 - Use Redis Pipeline for batch cache operations
 - Add Prometheus metrics endpoint for observability
+- Move hardcoded values (worker pool size, TTL, DB pool size) to environment config
