@@ -1,0 +1,973 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /scripts/load_test.js
+        output: -
+
+     scenarios: (100.00%) 3 scenarios, 209 max VUs, 3m30s max duration (incl. graceful stop):
+              * single_user_load: 100.00 iterations/s for 1m0s (maxVUs: 50-200, gracefulStop: 30s)
+              * batch_stress: Up to 30 looping VUs for 1m20s over 3 stages (gracefulRampDown: 30s, exec: batchTest, startTime: 1m10s, gracefulStop: 30s)
+              * cache_effectiveness: 5 looping VUs for 30s (exec: cacheTest, startTime: 2m30s, gracefulStop: 30s)
+
+
+running (0m01.0s), 010/059 VUs, 90 complete and 0 interrupted iterations
+single_user_load      [   2% ] 010/050 VUs  0m01.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      1m09.0s      
+cache_effectiveness • [   0% ] waiting      2m29.0s      
+
+running (0m02.0s), 010/059 VUs, 190 complete and 0 interrupted iterations
+single_user_load      [   3% ] 010/050 VUs  0m02.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      1m08.0s      
+cache_effectiveness • [   0% ] waiting      2m28.0s      
+
+running (0m03.0s), 010/059 VUs, 290 complete and 0 interrupted iterations
+single_user_load      [   5% ] 010/050 VUs  0m03.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      1m07.0s      
+cache_effectiveness • [   0% ] waiting      2m27.0s      
+
+running (0m04.0s), 010/059 VUs, 390 complete and 0 interrupted iterations
+single_user_load      [   7% ] 010/050 VUs  0m04.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      1m06.0s      
+cache_effectiveness • [   0% ] waiting      2m26.0s      
+
+running (0m05.0s), 010/059 VUs, 490 complete and 0 interrupted iterations
+single_user_load      [   8% ] 010/050 VUs  0m05.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      1m05.0s      
+cache_effectiveness • [   0% ] waiting      2m25.0s      
+
+running (0m06.0s), 010/059 VUs, 590 complete and 0 interrupted iterations
+single_user_load      [  10% ] 010/050 VUs  0m06.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      1m04.0s      
+cache_effectiveness • [   0% ] waiting      2m24.0s      
+
+running (0m07.0s), 010/059 VUs, 690 complete and 0 interrupted iterations
+single_user_load      [  12% ] 010/050 VUs  0m07.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      1m03.0s      
+cache_effectiveness • [   0% ] waiting      2m23.0s      
+
+running (0m08.0s), 010/059 VUs, 790 complete and 0 interrupted iterations
+single_user_load      [  13% ] 010/050 VUs  0m08.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      1m02.0s      
+cache_effectiveness • [   0% ] waiting      2m22.0s      
+
+running (0m09.0s), 010/059 VUs, 890 complete and 0 interrupted iterations
+single_user_load      [  15% ] 010/050 VUs  0m09.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      1m01.0s      
+cache_effectiveness • [   0% ] waiting      2m21.0s      
+
+running (0m10.0s), 010/059 VUs, 990 complete and 0 interrupted iterations
+single_user_load      [  17% ] 010/050 VUs  0m10.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      1m00.0s      
+cache_effectiveness • [   0% ] waiting      2m20.0s      
+
+running (0m11.0s), 011/059 VUs, 1089 complete and 0 interrupted iterations
+single_user_load      [  18% ] 011/050 VUs  0m11.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m59.0s      
+cache_effectiveness • [   0% ] waiting      2m19.0s      
+
+running (0m12.0s), 010/059 VUs, 1190 complete and 0 interrupted iterations
+single_user_load      [  20% ] 010/050 VUs  0m12.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m58.0s      
+cache_effectiveness • [   0% ] waiting      2m18.0s      
+
+running (0m13.0s), 010/059 VUs, 1290 complete and 0 interrupted iterations
+single_user_load      [  22% ] 010/050 VUs  0m13.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m57.0s      
+cache_effectiveness • [   0% ] waiting      2m17.0s      
+
+running (0m14.0s), 010/059 VUs, 1390 complete and 0 interrupted iterations
+single_user_load      [  23% ] 010/050 VUs  0m14.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m56.0s      
+cache_effectiveness • [   0% ] waiting      2m16.0s      
+
+running (0m15.0s), 010/059 VUs, 1490 complete and 0 interrupted iterations
+single_user_load      [  25% ] 010/050 VUs  0m15.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m55.0s      
+cache_effectiveness • [   0% ] waiting      2m15.0s      
+
+running (0m16.0s), 010/059 VUs, 1590 complete and 0 interrupted iterations
+single_user_load      [  27% ] 010/050 VUs  0m16.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m54.0s      
+cache_effectiveness • [   0% ] waiting      2m14.0s      
+
+running (0m17.0s), 010/059 VUs, 1690 complete and 0 interrupted iterations
+single_user_load      [  28% ] 010/050 VUs  0m17.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m53.0s      
+cache_effectiveness • [   0% ] waiting      2m13.0s      
+
+running (0m18.0s), 010/059 VUs, 1790 complete and 0 interrupted iterations
+single_user_load      [  30% ] 010/050 VUs  0m18.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m52.0s      
+cache_effectiveness • [   0% ] waiting      2m12.0s      
+
+running (0m19.0s), 010/059 VUs, 1890 complete and 0 interrupted iterations
+single_user_load      [  32% ] 010/050 VUs  0m19.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m51.0s      
+cache_effectiveness • [   0% ] waiting      2m11.0s      
+
+running (0m20.0s), 010/059 VUs, 1990 complete and 0 interrupted iterations
+single_user_load      [  33% ] 010/050 VUs  0m20.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m50.0s      
+cache_effectiveness • [   0% ] waiting      2m10.0s      
+
+running (0m21.0s), 010/059 VUs, 2090 complete and 0 interrupted iterations
+single_user_load      [  35% ] 010/050 VUs  0m21.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m49.0s      
+cache_effectiveness • [   0% ] waiting      2m09.0s      
+
+running (0m22.0s), 010/059 VUs, 2190 complete and 0 interrupted iterations
+single_user_load      [  37% ] 010/050 VUs  0m22.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m48.0s      
+cache_effectiveness • [   0% ] waiting      2m08.0s      
+
+running (0m23.0s), 010/059 VUs, 2290 complete and 0 interrupted iterations
+single_user_load      [  38% ] 010/050 VUs  0m23.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m47.0s      
+cache_effectiveness • [   0% ] waiting      2m07.0s      
+
+running (0m24.0s), 010/059 VUs, 2390 complete and 0 interrupted iterations
+single_user_load      [  40% ] 010/050 VUs  0m24.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m46.0s      
+cache_effectiveness • [   0% ] waiting      2m06.0s      
+
+running (0m25.0s), 010/059 VUs, 2490 complete and 0 interrupted iterations
+single_user_load      [  42% ] 010/050 VUs  0m25.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m45.0s      
+cache_effectiveness • [   0% ] waiting      2m05.0s      
+
+running (0m26.0s), 010/059 VUs, 2590 complete and 0 interrupted iterations
+single_user_load      [  43% ] 010/050 VUs  0m26.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m44.0s      
+cache_effectiveness • [   0% ] waiting      2m04.0s      
+
+running (0m27.0s), 010/059 VUs, 2690 complete and 0 interrupted iterations
+single_user_load      [  45% ] 010/050 VUs  0m27.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m43.0s      
+cache_effectiveness • [   0% ] waiting      2m03.0s      
+
+running (0m28.0s), 010/059 VUs, 2790 complete and 0 interrupted iterations
+single_user_load      [  47% ] 010/050 VUs  0m28.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m42.0s      
+cache_effectiveness • [   0% ] waiting      2m02.0s      
+
+running (0m29.0s), 010/059 VUs, 2890 complete and 0 interrupted iterations
+single_user_load      [  48% ] 010/050 VUs  0m29.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m41.0s      
+cache_effectiveness • [   0% ] waiting      2m01.0s      
+
+running (0m30.0s), 010/059 VUs, 2990 complete and 0 interrupted iterations
+single_user_load      [  50% ] 010/050 VUs  0m30.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m40.0s      
+cache_effectiveness • [   0% ] waiting      2m00.0s      
+
+running (0m31.0s), 010/059 VUs, 3090 complete and 0 interrupted iterations
+single_user_load      [  52% ] 010/050 VUs  0m31.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m39.0s      
+cache_effectiveness • [   0% ] waiting      1m59.0s      
+
+running (0m32.0s), 010/059 VUs, 3190 complete and 0 interrupted iterations
+single_user_load      [  53% ] 010/050 VUs  0m32.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m38.0s      
+cache_effectiveness • [   0% ] waiting      1m58.0s      
+
+running (0m33.0s), 010/059 VUs, 3290 complete and 0 interrupted iterations
+single_user_load      [  55% ] 010/050 VUs  0m33.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m37.0s      
+cache_effectiveness • [   0% ] waiting      1m57.0s      
+
+running (0m34.0s), 010/059 VUs, 3390 complete and 0 interrupted iterations
+single_user_load      [  57% ] 010/050 VUs  0m34.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m36.0s      
+cache_effectiveness • [   0% ] waiting      1m56.0s      
+
+running (0m35.0s), 010/059 VUs, 3490 complete and 0 interrupted iterations
+single_user_load      [  58% ] 010/050 VUs  0m35.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m35.0s      
+cache_effectiveness • [   0% ] waiting      1m55.0s      
+
+running (0m36.0s), 010/059 VUs, 3590 complete and 0 interrupted iterations
+single_user_load      [  60% ] 010/050 VUs  0m36.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m34.0s      
+cache_effectiveness • [   0% ] waiting      1m54.0s      
+
+running (0m37.0s), 010/059 VUs, 3690 complete and 0 interrupted iterations
+single_user_load      [  62% ] 010/050 VUs  0m37.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m33.0s      
+cache_effectiveness • [   0% ] waiting      1m53.0s      
+
+running (0m38.0s), 010/059 VUs, 3790 complete and 0 interrupted iterations
+single_user_load      [  63% ] 010/050 VUs  0m38.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m32.0s      
+cache_effectiveness • [   0% ] waiting      1m52.0s      
+
+running (0m39.0s), 010/059 VUs, 3890 complete and 0 interrupted iterations
+single_user_load      [  65% ] 010/050 VUs  0m39.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m31.0s      
+cache_effectiveness • [   0% ] waiting      1m51.0s      
+
+running (0m40.0s), 010/059 VUs, 3990 complete and 0 interrupted iterations
+single_user_load      [  67% ] 010/050 VUs  0m40.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m30.0s      
+cache_effectiveness • [   0% ] waiting      1m50.0s      
+
+running (0m41.0s), 010/059 VUs, 4090 complete and 0 interrupted iterations
+single_user_load      [  68% ] 010/050 VUs  0m41.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m29.0s      
+cache_effectiveness • [   0% ] waiting      1m49.0s      
+
+running (0m42.0s), 010/059 VUs, 4190 complete and 0 interrupted iterations
+single_user_load      [  70% ] 010/050 VUs  0m42.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m28.0s      
+cache_effectiveness • [   0% ] waiting      1m48.0s      
+
+running (0m43.0s), 010/059 VUs, 4290 complete and 0 interrupted iterations
+single_user_load      [  72% ] 010/050 VUs  0m43.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m27.0s      
+cache_effectiveness • [   0% ] waiting      1m47.0s      
+
+running (0m44.0s), 010/059 VUs, 4390 complete and 0 interrupted iterations
+single_user_load      [  73% ] 010/050 VUs  0m44.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m26.0s      
+cache_effectiveness • [   0% ] waiting      1m46.0s      
+
+running (0m45.0s), 010/059 VUs, 4490 complete and 0 interrupted iterations
+single_user_load      [  75% ] 010/050 VUs  0m45.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m25.0s      
+cache_effectiveness • [   0% ] waiting      1m45.0s      
+
+running (0m46.0s), 010/059 VUs, 4590 complete and 0 interrupted iterations
+single_user_load      [  77% ] 010/050 VUs  0m46.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m24.0s      
+cache_effectiveness • [   0% ] waiting      1m44.0s      
+
+running (0m47.0s), 010/059 VUs, 4690 complete and 0 interrupted iterations
+single_user_load      [  78% ] 010/050 VUs  0m47.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m23.0s      
+cache_effectiveness • [   0% ] waiting      1m43.0s      
+
+running (0m48.0s), 010/059 VUs, 4790 complete and 0 interrupted iterations
+single_user_load      [  80% ] 010/050 VUs  0m48.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m22.0s      
+cache_effectiveness • [   0% ] waiting      1m42.0s      
+
+running (0m49.0s), 010/059 VUs, 4890 complete and 0 interrupted iterations
+single_user_load      [  82% ] 010/050 VUs  0m49.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m21.0s      
+cache_effectiveness • [   0% ] waiting      1m41.0s      
+
+running (0m50.0s), 010/059 VUs, 4990 complete and 0 interrupted iterations
+single_user_load      [  83% ] 010/050 VUs  0m50.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m20.0s      
+cache_effectiveness • [   0% ] waiting      1m40.0s      
+
+running (0m51.0s), 010/059 VUs, 5090 complete and 0 interrupted iterations
+single_user_load      [  85% ] 010/050 VUs  0m51.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m19.0s      
+cache_effectiveness • [   0% ] waiting      1m39.0s      
+
+running (0m52.0s), 010/059 VUs, 5190 complete and 0 interrupted iterations
+single_user_load      [  87% ] 010/050 VUs  0m52.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m18.0s      
+cache_effectiveness • [   0% ] waiting      1m38.0s      
+
+running (0m53.0s), 010/059 VUs, 5290 complete and 0 interrupted iterations
+single_user_load      [  88% ] 010/050 VUs  0m53.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m17.0s      
+cache_effectiveness • [   0% ] waiting      1m37.0s      
+
+running (0m54.0s), 010/059 VUs, 5390 complete and 0 interrupted iterations
+single_user_load      [  90% ] 010/050 VUs  0m54.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m16.0s      
+cache_effectiveness • [   0% ] waiting      1m36.0s      
+
+running (0m55.0s), 010/059 VUs, 5490 complete and 0 interrupted iterations
+single_user_load      [  92% ] 010/050 VUs  0m55.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m15.0s      
+cache_effectiveness • [   0% ] waiting      1m35.0s      
+
+running (0m56.0s), 010/059 VUs, 5590 complete and 0 interrupted iterations
+single_user_load      [  93% ] 010/050 VUs  0m56.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m14.0s      
+cache_effectiveness • [   0% ] waiting      1m34.0s      
+
+running (0m57.0s), 010/059 VUs, 5690 complete and 0 interrupted iterations
+single_user_load      [  95% ] 010/050 VUs  0m57.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m13.0s      
+cache_effectiveness • [   0% ] waiting      1m33.0s      
+
+running (0m58.0s), 010/059 VUs, 5790 complete and 0 interrupted iterations
+single_user_load      [  97% ] 010/050 VUs  0m58.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m12.0s      
+cache_effectiveness • [   0% ] waiting      1m32.0s      
+
+running (0m59.0s), 010/059 VUs, 5890 complete and 0 interrupted iterations
+single_user_load      [  98% ] 010/050 VUs  0m59.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m11.0s      
+cache_effectiveness • [   0% ] waiting      1m31.0s      
+
+running (1m00.0s), 011/059 VUs, 5989 complete and 0 interrupted iterations
+single_user_load      [ 100% ] 011/050 VUs  1m00.0s/1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m10.0s      
+cache_effectiveness • [   0% ] waiting      1m30.0s      
+
+running (1m01.0s), 000/059 VUs, 6001 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m09.0s
+cache_effectiveness • [   0% ] waiting      1m29.0s
+
+running (1m02.0s), 000/059 VUs, 6001 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m08.0s
+cache_effectiveness • [   0% ] waiting      1m28.0s
+
+running (1m03.0s), 000/059 VUs, 6001 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m07.0s
+cache_effectiveness • [   0% ] waiting      1m27.0s
+
+running (1m04.0s), 000/059 VUs, 6001 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m06.0s
+cache_effectiveness • [   0% ] waiting      1m26.0s
+
+running (1m05.0s), 000/059 VUs, 6001 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m05.0s
+cache_effectiveness • [   0% ] waiting      1m25.0s
+
+running (1m06.0s), 000/059 VUs, 6001 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m04.0s
+cache_effectiveness • [   0% ] waiting      1m24.0s
+
+running (1m07.0s), 000/059 VUs, 6001 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m03.0s
+cache_effectiveness • [   0% ] waiting      1m23.0s
+
+running (1m08.0s), 000/059 VUs, 6001 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m02.0s
+cache_effectiveness • [   0% ] waiting      1m22.0s
+
+running (1m09.0s), 000/059 VUs, 6001 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m01.0s
+cache_effectiveness • [   0% ] waiting      1m21.0s
+
+running (1m10.0s), 000/059 VUs, 6001 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        • [   0% ] waiting      0m00.0s
+cache_effectiveness • [   0% ] waiting      1m20.0s
+
+running (1m11.0s), 001/059 VUs, 6001 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [   1% ] 01/30 VUs    0m01.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m19.0s
+
+running (1m12.0s), 001/059 VUs, 6002 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [   2% ] 01/30 VUs    0m02.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m18.0s
+
+running (1m13.0s), 002/059 VUs, 6003 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [   4% ] 02/30 VUs    0m03.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m17.0s
+
+running (1m14.0s), 002/059 VUs, 6005 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [   5% ] 02/30 VUs    0m04.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m16.0s
+
+running (1m15.0s), 003/059 VUs, 6007 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [   6% ] 03/30 VUs    0m05.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m15.0s
+
+running (1m16.0s), 003/059 VUs, 6010 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [   7% ] 03/30 VUs    0m06.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m14.0s
+
+running (1m17.0s), 004/059 VUs, 6013 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [   9% ] 04/30 VUs    0m07.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m13.0s
+
+running (1m18.0s), 004/059 VUs, 6017 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  10% ] 04/30 VUs    0m08.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m12.0s
+
+running (1m19.0s), 005/059 VUs, 6021 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  11% ] 05/30 VUs    0m09.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m11.0s
+
+running (1m20.0s), 005/059 VUs, 6026 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  12% ] 05/30 VUs    0m10.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m10.0s
+
+running (1m21.0s), 005/059 VUs, 6031 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  14% ] 05/30 VUs    0m11.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m09.0s
+
+running (1m22.0s), 006/059 VUs, 6036 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  15% ] 06/30 VUs    0m12.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m08.0s
+
+running (1m23.0s), 006/059 VUs, 6042 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  16% ] 06/30 VUs    0m13.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m07.0s
+
+running (1m24.0s), 007/059 VUs, 6048 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  17% ] 07/30 VUs    0m14.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m06.0s
+
+running (1m25.0s), 007/059 VUs, 6055 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  19% ] 07/30 VUs    0m15.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m05.0s
+
+running (1m26.0s), 008/059 VUs, 6062 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  20% ] 08/30 VUs    0m16.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m04.0s
+
+running (1m27.0s), 008/059 VUs, 6070 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  21% ] 08/30 VUs    0m17.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m03.0s
+
+running (1m28.0s), 009/059 VUs, 6078 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  22% ] 09/30 VUs    0m18.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m02.0s
+
+running (1m29.0s), 009/059 VUs, 6087 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  24% ] 09/30 VUs    0m19.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m01.0s
+
+running (1m30.0s), 009/059 VUs, 6096 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  25% ] 09/30 VUs    0m20.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      1m00.0s
+
+running (1m31.0s), 010/059 VUs, 6105 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  26% ] 10/30 VUs    0m21.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m59.0s
+
+running (1m32.0s), 010/059 VUs, 6115 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  27% ] 10/30 VUs    0m22.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m58.0s
+
+running (1m33.0s), 011/059 VUs, 6125 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  29% ] 11/30 VUs    0m23.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m57.0s
+
+running (1m34.0s), 011/059 VUs, 6136 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  30% ] 11/30 VUs    0m24.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m56.0s
+
+running (1m35.0s), 012/059 VUs, 6147 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  31% ] 12/30 VUs    0m25.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m55.0s
+
+running (1m36.0s), 012/059 VUs, 6159 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  32% ] 12/30 VUs    0m26.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m54.0s
+
+running (1m37.0s), 013/059 VUs, 6171 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  34% ] 13/30 VUs    0m27.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m53.0s
+
+running (1m38.0s), 013/059 VUs, 6184 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  35% ] 13/30 VUs    0m28.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m52.0s
+
+running (1m39.0s), 014/059 VUs, 6197 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  36% ] 14/30 VUs    0m29.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m51.0s
+
+running (1m40.0s), 014/059 VUs, 6211 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  37% ] 14/30 VUs    0m30.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m50.0s
+
+running (1m41.0s), 015/059 VUs, 6225 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  39% ] 15/30 VUs    0m31.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m49.0s
+
+running (1m42.0s), 015/059 VUs, 6240 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  40% ] 15/30 VUs    0m32.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m48.0s
+
+running (1m43.0s), 016/059 VUs, 6255 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  41% ] 16/30 VUs    0m33.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m47.0s
+
+running (1m44.0s), 016/059 VUs, 6271 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  42% ] 16/30 VUs    0m34.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m46.0s
+
+running (1m45.0s), 017/059 VUs, 6287 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  44% ] 17/30 VUs    0m35.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m45.0s
+
+running (1m46.0s), 017/059 VUs, 6304 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  45% ] 17/30 VUs    0m36.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m44.0s
+
+running (1m47.0s), 018/059 VUs, 6321 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  46% ] 18/30 VUs    0m37.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m43.0s
+
+running (1m48.0s), 018/059 VUs, 6339 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  47% ] 18/30 VUs    0m38.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m42.0s
+
+running (1m49.0s), 019/059 VUs, 6357 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  49% ] 19/30 VUs    0m39.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m41.0s
+
+running (1m50.0s), 019/059 VUs, 6376 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  50% ] 19/30 VUs    0m40.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m40.0s
+
+running (1m51.0s), 020/059 VUs, 6395 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  51% ] 20/30 VUs    0m41.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m39.0s
+
+running (1m52.0s), 020/059 VUs, 6415 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  52% ] 20/30 VUs    0m42.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m38.0s
+
+running (1m53.0s), 021/059 VUs, 6435 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  54% ] 21/30 VUs    0m43.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m37.0s
+
+running (1m54.0s), 021/059 VUs, 6456 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  55% ] 21/30 VUs    0m44.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m36.0s
+
+running (1m55.0s), 022/059 VUs, 6477 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  56% ] 22/30 VUs    0m45.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m35.0s
+
+running (1m56.0s), 022/059 VUs, 6499 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  57% ] 22/30 VUs    0m46.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m34.0s
+
+running (1m57.0s), 023/059 VUs, 6521 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  59% ] 23/30 VUs    0m47.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m33.0s
+
+running (1m58.0s), 023/059 VUs, 6544 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  60% ] 23/30 VUs    0m48.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m32.0s
+
+running (1m59.0s), 024/059 VUs, 6567 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  61% ] 24/30 VUs    0m49.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m31.0s
+
+running (2m00.0s), 024/059 VUs, 6591 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  62% ] 24/30 VUs    0m50.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m30.0s
+
+running (2m01.0s), 025/059 VUs, 6615 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  64% ] 25/30 VUs    0m51.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m29.0s
+
+running (2m02.0s), 025/059 VUs, 6640 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  65% ] 25/30 VUs    0m52.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m28.0s
+
+running (2m03.0s), 026/059 VUs, 6664 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  66% ] 26/30 VUs    0m53.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m27.0s
+
+running (2m04.0s), 026/059 VUs, 6690 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  67% ] 26/30 VUs    0m54.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m26.0s
+
+running (2m05.0s), 027/059 VUs, 6716 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  69% ] 27/30 VUs    0m55.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m25.0s
+
+running (2m06.0s), 027/059 VUs, 6743 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  70% ] 27/30 VUs    0m56.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m24.0s
+
+running (2m07.0s), 028/059 VUs, 6770 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  71% ] 28/30 VUs    0m57.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m23.0s
+
+running (2m08.0s), 028/059 VUs, 6798 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  72% ] 28/30 VUs    0m58.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m22.0s
+
+running (2m09.0s), 029/059 VUs, 6826 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  74% ] 29/30 VUs    0m59.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m21.0s
+
+running (2m10.0s), 029/059 VUs, 6855 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  75% ] 29/30 VUs    1m00.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m20.0s
+
+running (2m11.0s), 030/059 VUs, 6884 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  76% ] 30/30 VUs    1m01.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m19.0s
+
+running (2m12.0s), 029/059 VUs, 6914 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  77% ] 29/30 VUs    1m02.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m18.0s
+
+running (2m13.0s), 027/059 VUs, 6943 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  79% ] 27/30 VUs    1m03.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m17.0s
+
+running (2m14.0s), 026/059 VUs, 6970 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  80% ] 26/30 VUs    1m04.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m16.0s
+
+running (2m15.0s), 024/059 VUs, 6996 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  81% ] 24/30 VUs    1m05.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m15.0s
+
+running (2m16.0s), 023/059 VUs, 7020 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  82% ] 23/30 VUs    1m06.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m14.0s
+
+running (2m17.0s), 021/059 VUs, 7043 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  84% ] 21/30 VUs    1m07.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m13.0s
+
+running (2m18.0s), 020/059 VUs, 7064 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  85% ] 20/30 VUs    1m08.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m12.0s
+
+running (2m19.0s), 018/059 VUs, 7084 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  86% ] 18/30 VUs    1m09.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m11.0s
+
+running (2m20.0s), 017/059 VUs, 7102 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  87% ] 17/30 VUs    1m10.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m10.0s
+
+running (2m21.0s), 015/059 VUs, 7119 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  89% ] 15/30 VUs    1m11.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m09.0s
+
+running (2m22.0s), 014/059 VUs, 7134 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  90% ] 14/30 VUs    1m12.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m08.0s
+
+running (2m23.0s), 012/059 VUs, 7148 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  91% ] 12/30 VUs    1m13.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m07.0s
+
+running (2m24.0s), 011/059 VUs, 7160 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  92% ] 11/30 VUs    1m14.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m06.0s
+
+running (2m25.0s), 008/059 VUs, 7171 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  94% ] 08/30 VUs    1m15.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m05.0s
+
+running (2m26.0s), 007/059 VUs, 7179 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  95% ] 07/30 VUs    1m16.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m04.0s
+
+running (2m27.0s), 006/059 VUs, 7186 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  96% ] 06/30 VUs    1m17.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m03.0s
+
+running (2m28.0s), 005/059 VUs, 7192 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  97% ] 05/30 VUs    1m18.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m02.0s
+
+running (2m29.0s), 003/059 VUs, 7197 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [  99% ] 03/30 VUs    1m19.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m01.0s
+
+running (2m30.0s), 001/059 VUs, 7200 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress          [ 100% ] 01/30 VUs    1m20.0s/1m20.0s
+cache_effectiveness • [   0% ] waiting      0m00.0s
+
+running (2m31.0s), 005/059 VUs, 7206 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [   3% ] 5 VUs        01.0s/30s
+
+running (2m32.0s), 005/059 VUs, 7216 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [   7% ] 5 VUs        02.0s/30s
+
+running (2m33.0s), 005/059 VUs, 7226 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  10% ] 5 VUs        03.0s/30s
+
+running (2m34.0s), 005/059 VUs, 7236 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  13% ] 5 VUs        04.0s/30s
+
+running (2m35.0s), 005/059 VUs, 7246 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  17% ] 5 VUs        05.0s/30s
+
+running (2m36.0s), 005/059 VUs, 7256 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  20% ] 5 VUs        06.0s/30s
+
+running (2m37.0s), 005/059 VUs, 7266 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  23% ] 5 VUs        07.0s/30s
+
+running (2m38.0s), 005/059 VUs, 7276 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  27% ] 5 VUs        08.0s/30s
+
+running (2m39.0s), 005/059 VUs, 7286 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  30% ] 5 VUs        09.0s/30s
+
+running (2m40.0s), 005/059 VUs, 7296 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  33% ] 5 VUs        10.0s/30s
+
+running (2m41.0s), 005/059 VUs, 7306 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  37% ] 5 VUs        11.0s/30s
+
+running (2m42.0s), 005/059 VUs, 7316 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  40% ] 5 VUs        12.0s/30s
+
+running (2m43.0s), 005/059 VUs, 7326 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  43% ] 5 VUs        13.0s/30s
+
+running (2m44.0s), 005/059 VUs, 7336 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  47% ] 5 VUs        14.0s/30s
+
+running (2m45.0s), 005/059 VUs, 7346 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  50% ] 5 VUs        15.0s/30s
+
+running (2m46.0s), 005/059 VUs, 7356 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  53% ] 5 VUs        16.0s/30s
+
+running (2m47.0s), 005/059 VUs, 7366 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  57% ] 5 VUs        17.0s/30s
+
+running (2m48.0s), 005/059 VUs, 7376 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  60% ] 5 VUs        18.0s/30s
+
+running (2m49.0s), 005/059 VUs, 7386 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  63% ] 5 VUs        19.0s/30s
+
+running (2m50.0s), 005/059 VUs, 7396 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  67% ] 5 VUs        20.0s/30s
+
+running (2m51.0s), 005/059 VUs, 7406 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  70% ] 5 VUs        21.0s/30s
+
+running (2m52.0s), 005/059 VUs, 7416 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  73% ] 5 VUs        22.0s/30s
+
+running (2m53.0s), 005/059 VUs, 7426 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  77% ] 5 VUs        23.0s/30s
+
+running (2m54.0s), 005/059 VUs, 7436 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  80% ] 5 VUs        24.0s/30s
+
+running (2m55.0s), 005/059 VUs, 7446 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  83% ] 5 VUs        25.0s/30s
+
+running (2m56.0s), 005/059 VUs, 7456 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  87% ] 5 VUs        26.0s/30s
+
+running (2m57.0s), 005/059 VUs, 7466 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  90% ] 5 VUs        27.0s/30s
+
+running (2m58.0s), 005/059 VUs, 7476 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  93% ] 5 VUs        28.0s/30s
+
+running (2m59.0s), 005/059 VUs, 7486 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [  97% ] 5 VUs        29.0s/30s
+
+running (3m00.0s), 005/059 VUs, 7496 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness   [ 100% ] 5 VUs        30.0s/30s
+
+
+  █ THRESHOLDS 
+
+    errors
+    ✓ 'rate<0.05' rate=0.00%
+
+    http_req_duration
+    ✓ 'p(95)<500' p(95)=1.35ms
+    ✓ 'p(99)<1000' p(99)=1.87ms
+
+    http_req_failed
+    ✓ 'rate<0.05' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 15902  88.298904/s
+    checks_succeeded...: 97.47% 15500 out of 15902
+    checks_failed......: 2.52%  402 out of 15902
+
+    ✓ status 200
+    ✓ has recommendations
+    ✓ batch status 200
+    ✗ has results
+      ↳  66% — ✓ 798 / ✗ 402
+    ✓ has summary
+    ✓ cache hit after warm-up
+
+    CUSTOM
+    cache_hits.....................: 100.00% 6301 out of 6301
+    errors.........................: 0.00%   0 out of 6001
+
+    HTTP
+    http_req_duration..............: avg=653.45µs min=372.91µs med=547.62µs max=7.08ms p(90)=1.08ms p(95)=1.35ms
+      { expected_response:true }...: avg=653.45µs min=372.91µs med=547.62µs max=7.08ms p(90)=1.08ms p(95)=1.35ms
+    http_req_failed................: 0.00%   0 out of 7501
+    http_reqs......................: 7501    41.650741/s
+
+    EXECUTION
+    iteration_duration.............: avg=261.33ms min=100.55ms med=101.22ms max=1.01s  p(90)=1s     p(95)=1s    
+    iterations.....................: 7501    41.650741/s
+    vus............................: 5       min=0            max=30
+    vus_max........................: 59      min=59           max=59
+
+    NETWORK
+    data_received..................: 20 MB   109 kB/s
+    data_sent......................: 774 kB  4.3 kB/s
+
+
+
+
+running (3m00.1s), 000/059 VUs, 7501 complete and 0 interrupted iterations
+single_user_load    ✓ [ 100% ] 000/050 VUs  1m0s  100.00 iters/s
+batch_stress        ✓ [ 100% ] 00/30 VUs    1m20s
+cache_effectiveness ✓ [ 100% ] 5 VUs        30s  
